@@ -6,3 +6,16 @@ http://plugins.getdans.info/drag-image/
 
 ##Installation
 Download from GitHub
+
+###Requirements
+jQuery
+
+###Markup
+`
+<script>
+$(document).ready(function(){
+    $('.image-container img').dragImage();
+});
+</script>
+
+`
