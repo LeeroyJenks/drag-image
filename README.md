@@ -17,4 +17,4 @@ $(document).ready(function(){
     $('.image-container img').dragImage();
 });
 </script>
-`
+```
