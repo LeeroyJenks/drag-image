@@ -11,8 +11,10 @@ Download from GitHub
 jQuery
 
 ###Markup
-`<script>
+``` javascript
+<script>
 $(document).ready(function(){
     $('.image-container img').dragImage();
 });
-</script>`
+</script>
+`
