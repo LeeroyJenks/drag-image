@@ -21,8 +21,7 @@ jQuery
 ###Description
 
 Some minor CSS is required. You will need to have a fixed size for the container element and add `overflow: hidden` to the container. The plugin is called directly on the image, and immediately expands it.
-You will most likely want to call the plugin on a click event as opposed to on load.
-i.e.
+You will most likely want to call the plugin on a click event as opposed to on load.<br>i.e.
 
 ```html
 <div>
