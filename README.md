@@ -23,7 +23,7 @@ $(document).ready(function(){
 Some minor CSS is required. The plugin is called directly on the image, and immediately expands it.
 You will most likely want to call the plugin on a click event as opposed to on load.
 i.e.
-```javascript
+```html
 <div>
     <img src="SOME_IMAGE.jpg" />
     <a href="javascript:void(0)" class="plus">Zoom</a>
