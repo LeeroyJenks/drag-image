@@ -23,6 +23,7 @@ $(document).ready(function(){
 Some minor CSS is required. You will need to have a fixed size for the container element and add `overflow: hidden` to the container. The plugin is called directly on the image, and immediately expands it.
 You will most likely want to call the plugin on a click event as opposed to on load.
 i.e.
+
 ```html
 <div>
     <img src="SOME_IMAGE.jpg" />
@@ -46,11 +47,11 @@ i.e.
 
 ###Options
 
-|Options|Values|
-|:---:|:---:|
-|defaultClick|function|
-|offsetX|Image offset (x).<br>Do not include units.<br>`default: 0`|
-|offsetY|Image offset (y).<br>Do not include units.<br>`default: 0`|
-|maxImageWidth|Max width of image based on<br>width of container.<br>Include units<br>`default: "200%"`|
+ Options        | Values
+ :------------: | :-------------------------------------------------------------------------------------: 
+ defaultClick   | function
+ offsetX        | Image offset (x).<br>Do not include units.<br>`default: 0`
+ offsetY        | Image offset (y).<br>Do not include units.<br>`default: 0`
+ maxImageWidth  | Max width of image based on<br>width of container.<br>Include units<br>`default: "200%"` 
 
 
