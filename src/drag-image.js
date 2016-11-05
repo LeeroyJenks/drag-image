@@ -10,7 +10,6 @@
 			maxImageWidth: '200%'
 		};
 		var settings = $.extend({}, defaults, options);
-		var initialStyle = [];
 		return this.each(function(index) {
 			var iniX, iniY, elX, elY;
 			var chosenElement = this;
@@ -19,7 +18,12 @@
 
 			var destroy = function() {
 				unbindIt();
-				$(chosenElement).attr('style', initialStyle).removeData('index').removeAttr('data-index').parent().attr('style', parentStyle);
+				var ind = $(chosenElement).data('index');
+				var prevStyle = $(chosenElement).data('style');
+				var parentPrevStyle = $(chosenElement).parent().data('style');
+				console.log(ind);
+				console.log(prevStyle);
+				$(chosenElement).attr('style', prevStyle).removeData(['index', 'style']).removeAttr('data-index').removeAttr('data-style').parent().attr('style', parentPrevStyle).removeData('style').removeAttr('data-style');
 			};
 
 			var bindIt = function() {
@@ -36,6 +40,10 @@
 					event.preventDefault();
 					event.stopPropagation();
 				});
+				$(chosenElement).parent().css({
+					'width': $(chosenElement).parent().outerWidth(),
+					'height': $(chosenElement).parent().outerHeight()
+				});
 				if (settings.autoSize) {
 					$(chosenElement).css({
 						'width': 'auto',
@@ -44,10 +52,6 @@
 						'max-height': 'none'
 					});
 				}
-				$(chosenElement).parent().css({
-					'width': $(chosenElement).parent().outerWidth(),
-					'height': $(chosenElement).parent().outerHeight()
-				});
 				$(chosenElement).css({
 					'display': 'block',
 					'position': 'absolute',
@@ -142,10 +146,10 @@
 			if (options == 'destroy') {
 				destroy();
 			} else {
-				//console.log($(chosenElement));
-				initialStyle = $(chosenElement).attr('style') || '';
-				parentStyle = $(chosenElement).parent().attr('style') || '';
-				$(chosenElement).attr('data-index', index);
+				initialStyle = ($(chosenElement).attr('style') !== undefined ? $(chosenElement).attr('style') : '');
+				parentStyle = ($(chosenElement).parent().attr('style') !== undefined ? $(chosenElement).parent().attr('style') : '');
+				console.log(initialStyle);
+				$(chosenElement).attr({'data-index': index, 'data-style': initialStyle}).parent().attr('data-style', parentStyle);
 				if (settings.maxWidth <= 0) {
 					bindIt($(chosenElement));
 				} else {
