@@ -48,7 +48,7 @@ i.e.
 ###Options
 
  Options        | Values
- :------------: | :-------------------------------------------------------------------------------------: 
+ -------------- | ----------------------------------------------------------------------------------------- 
  defaultClick   | function
  offsetX        | Image offset (x).<br>Do not include units.<br>`default: 0`
  offsetY        | Image offset (y).<br>Do not include units.<br>`default: 0`
