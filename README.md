@@ -49,8 +49,8 @@ i.e.
 |Options|Values|
 |:---:|:---:|
 |defaultClick|function|
-|offsetX|Image offset (x)\n`default: 0`|
-|offsetY|Image offset (y) `default: 0`|
-|maxImageWidth|Max width of image based on width of container. `default: "200%"`|
+|offsetX|Image offset (x)<br>`default: 0`|
+|offsetY|Image offset (y)<br>`default: 0`|
+|maxImageWidth|Max width of image based on width of container.<br>`default: "200%"`|
 
 
