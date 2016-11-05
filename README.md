@@ -13,9 +13,9 @@ jQuery
 ###Use
 ```html
 <script>
-$(document).ready(function(){
-    $('.image-container img').dragImage();
-});
+    $(document).ready(function(){
+        $('.image-container img').dragImage();
+    });
 </script>
 ```
 ###Description
