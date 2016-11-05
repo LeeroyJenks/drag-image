@@ -48,15 +48,15 @@ You will most likely want to call the plugin on a click event as opposed to on l
 
 Options        | Definition
 -------------- | ----------------------------------------------------------------------------------------- 
-defaultClick   | function
-offsetX        | Image offset (x).<br>Do not include units.<br>`default: 0`
-offsetY        | Image offset (y).<br>Do not include units.<br>`default: 0`
-maxImageWidth  | Max width of image based on<br>width of container.<br>Include units<br>`default: "200%"` 
+`defaultClick`   | function
+`offsetX`        | Image offset (x).<br>Do not include units.<br>`default: 0`
+`offsetY`        | Image offset (y).<br>Do not include units.<br>`default: 0`
+`maxImageWidth`  | Max width of image based on<br>width of container.<br>Include units<br>`default: "200%"` 
  
 ###Methods
  
-Method    | Definition         
---------- | ------------------- 
-'destroy' | Destroy drag image. 
+Method      | Definition         
+---------   | ------------------- 
+`'destroy'` | Destroy drag image. 
 
 
