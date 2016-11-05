@@ -15,10 +15,11 @@
 			var iniX, iniY, elX, elY;
 			var chosenElement = this;
 			var dragged = false;
+			var initialStyle, parentStyle;
 
 			var destroy = function() {
 				unbindIt();
-				$(chosenElement).attr('style', '').removeData('index').removeAttr('data-index');
+				$(chosenElement).attr('style', initialStyle).removeData('index').removeAttr('data-index').parent().attr('style', parentStyle);
 			};
 
 			var bindIt = function() {
@@ -43,6 +44,10 @@
 						'max-height': 'none'
 					});
 				}
+				$(chosenElement).parent().css({
+					'width': $(chosenElement).parent().outerWidth(),
+					'height': $(chosenElement).parent().outerHeight()
+				});
 				$(chosenElement).css({
 					'display': 'block',
 					'position': 'absolute',
@@ -124,12 +129,11 @@
 
 			};
 
-			var resizeWindow = function(event) {
-				var $thisElement = $(event.data.element);
+			var resizeWindow = function() {
+				var $thisElement = $(chosenElement);
 				//console.log('resizing');
 				if ($(window).width() > settings.maxWidth) {
-					unbindIt($thisElement);
-					$thisElement.attr('style', initialStyle[event.data.index]);
+					destroy();
 				} else {
 					bindIt($thisElement);
 				}
@@ -139,14 +143,14 @@
 				destroy();
 			} else {
 				//console.log($(chosenElement));
-				initialStyle[index] = $(chosenElement).attr('style') || '';
+				initialStyle = $(chosenElement).attr('style') || '';
+				parentStyle = $(chosenElement).parent().attr('style') || '';
 				$(chosenElement).attr('data-index', index);
 				if (settings.maxWidth <= 0) {
 					bindIt($(chosenElement));
 				} else {
 					if ($(window).width() > settings.maxWidth) {
-						unbindIt($(chosenElement));
-						$(chosenElement).attr('style', initialStyle[index]);
+						destroy();
 					} else {
 						bindIt($(chosenElement));
 					}

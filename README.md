@@ -26,6 +26,9 @@ You will most likely want to call the plugin on a click event as opposed to on l
 ###Example
 
 ```html
+<style>
+
+</style>
 <div>
     <img src="SOME_IMAGE.jpg" />
     <a href="javascript:void(0)" class="plus">Zoom</a>
@@ -49,7 +52,8 @@ You will most likely want to call the plugin on a click event as opposed to on l
 ###Options
 
 Options          | Definition
----------------- | ----------------------------------------------------------------------------------------- 
+---------------- | ----------------------------------------------------------------------------------------------------------- 
+`maxWidth`       | Window width at which dragImage is destroyed.<br>Below width, dragImage will be bound again.<br>`default: 0`
 `defaultClick`   | function
 `offsetX`        | Image offset (x).<br>Do not include units.<br>`default: 0`
 `offsetY`        | Image offset (y).<br>Do not include units.<br>`default: 0`
