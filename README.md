@@ -46,8 +46,8 @@ You will most likely want to call the plugin on a click event as opposed to on l
 
 ###Options
 
-Options        | Definition
--------------- | ----------------------------------------------------------------------------------------- 
+Options          | Definition
+--------------   | ----------------------------------------------------------------------------------------- 
 `defaultClick`   | function
 `offsetX`        | Image offset (x).<br>Do not include units.<br>`default: 0`
 `offsetY`        | Image offset (y).<br>Do not include units.<br>`default: 0`
