@@ -41,6 +41,7 @@ You will most likely want to call the plugin on a click event as opposed to on l
         height: auto;
     }
 </style>
+
 <div class="image-container">
     <img src="SOME_IMAGE.jpg" />
     <a href="javascript:void(0)" class="plus">Zoom</a>
