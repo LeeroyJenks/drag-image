@@ -27,9 +27,21 @@ You will most likely want to call the plugin on a click event as opposed to on l
 
 ```html
 <style>
-
+    .image-container{
+        width: 358px;
+        height: auto;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 </style>
-<div>
+<div class="image-container">
     <img src="SOME_IMAGE.jpg" />
     <a href="javascript:void(0)" class="plus">Zoom</a>
 </div>
