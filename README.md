@@ -1,16 +1,16 @@
 # drag-image
 A jQuery plugin that expands an image within its container and allows for dragging using mouse and touch.
 
-##Demo
+## Demo
 [plugins.getdans.info/drag-image](http://plugins.getdans.info/drag-image)
 
-##Installation
+## Installation
 Download from GitHub
 
-###Requirements
+### Requirements
 jQuery
 
-###Use
+### Use
 ```html
 <script>
     $(document).ready(function(){
@@ -18,12 +18,12 @@ jQuery
     });
 </script>
 ```
-###Description
+### Description
 
 Some minor CSS is required. You will need to have a fixed size for the container element and add `overflow: hidden` to the container. The plugin is called directly on the image, and immediately expands it.
 You will most likely want to call the plugin on a click event as opposed to on load.
 
-###Example
+### Example
 
 ```html
 <style>
@@ -62,7 +62,7 @@ You will most likely want to call the plugin on a click event as opposed to on l
 </script>
 ```
 
-###Options
+### Options
 
 Options          | Definition
 ---------------- | ----------------------------------------------------------------------------------------------------------- 
@@ -72,7 +72,7 @@ Options          | Definition
 `offsetY`        | Image offset (y).<br>Do not include units.<br>`default: 0`
 `maxImageWidth`  | Max width of image based on<br>width of container.<br>Include units<br>`default: '200%'` 
  
-###Methods
+### Methods
  
 Method      | Definition         
 ----------- | ------------------- 
